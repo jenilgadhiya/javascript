@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAME AGE PRINTING with using function</title>
+</head>
+
+<body>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name">
+    <label for="age">Enter your age:</label>
+    <input type="number" id="age">
+    <button onclick="displayInfo()">click</button>
+    <p id="result1"></p>
+    <p id="result2"></p>
+</body>
+<script>
+    const displayInfo = () => {
+        let name = document.getElementById('name').value;
+        let age = document.getElementById('age').value;
+        let result1 = document.getElementById('result1');
+        let result2 = document.getElementById('result2');
+        document.getElementById('result1').innerHTML = `your name is ${name}`;
+        document.getElementById('result2').innerHTML = `your age is ${age}`;
+    }
+</script>
+
+</html>

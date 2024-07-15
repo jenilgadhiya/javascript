@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create a function</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="number()">click</button>
+
+        <h1 id="result1"></h1>
+        <h1 id="result2"></h1>
+    </div>
+
+</body>
+<script>
+    const number = () => {
+        let num = 10;
+        document.getElementById('result1').innerHTML = `${num}`;
+        num = 20;
+        document.getElementById('result2').innerHTML = `${num}`;
+    }
+</script>
+
+</html>

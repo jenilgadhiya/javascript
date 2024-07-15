@@ -1,0 +1,130 @@
+- Array Methods
+
+// Push
+- Push method is use to add new elements in array in the last 
+
+let array=[3,4,1,2,4]
+
+array.push(10)
+console.log(array)
+
+- Output 
+[ 3, 4, 1, 2, 4, 10 ]
+
+
+// pop
+- Pop method is use to Remove last elements From the array
+ 
+let array=[3,4,1,2,4]
+
+array.pop()
+console.log(array)
+
+- Output 
+[ 3, 4, 1, 2 ]
+
+
+// Length 
+- Length method is use to Count Length of elements in array 
+ 
+let array=[3,4,1,2,4]
+
+let n= array.length
+console.log(n)
+
+- Output 
+5
+
+
+// splice
+- splice method is use to remove elements in array in the middle
+ 
+let array=[3,4,1,2,4]
+
+array.splice(1,2)
+console.log(array)
+
+- Output 
+[ 3, 2, 4 ]
+
+
+// slice
+-
+ 
+let array=[3,4,1,2,4]
+
+const n = array.slice(1, 3);
+console.log(n)
+
+- Output 
+[ 4, 1 ]
+
+
+// sort
+- sort method is use to sorting (ascending,descending) elements in array 
+ 
+let array=[3,4,1,2,4]
+
+array.sort((a,b)=>a-b)
+console.log(array)
+
+array.sort((a,b)=>b-a)
+console.log(array)
+
+- Output 
+[ 1, 2, 3, 4, 4 ]
+[ 4, 4, 3, 2, 1 ]
+
+
+// shift
+- shift method is use to remove first elements in array 
+ 
+let array=[3,4,1,2,4]
+
+array.shift()
+console.log(array)
+
+- Output 
+[ 4, 1, 2, 4 ]
+
+
+// unshift
+- unshift method is use to add first elements in array 
+ 
+let array=[3,4,1,2,4]
+
+array.unshift(10)
+console.log(array)
+
+- Output 
+[ 10, 3, 4, 1, 2, 4 ]
+
+// Concat
+- concat method is use to merge 2 array 
+ 
+let a = "RED";
+let b = "WHITE";
+let result = a.concat(b);
+
+console.log(result);
+
+- Output 
+REDWHITE
+
+
+// reverse 
+- reverse method is use to reverse array 
+ 
+let array=[3,4,1,2,4]
+
+array.reverse()
+console.log(array)
+
+- Output 
+[ 4, 2, 1, 4, 3 ]
+
+
+
+
+
+
