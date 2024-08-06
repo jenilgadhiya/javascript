@@ -3,76 +3,108 @@ class Book {
     #price;
     #rentalPrice;
     #copiesAvailable;
-
+    #rentedCopies;
+  
     constructor(title, author, price, rentalPrice, copiesAvailable) {
-        this.title = title;
-        this.#author = author;
-        this.#price = price;
-        this.#rentalPrice = rentalPrice;
-        this.#copiesAvailable = copiesAvailable;
+      this.title = title;
+      this.#author = author;
+      this.#price = price;
+      this.#rentalPrice = rentalPrice;
+      this.#copiesAvailable = copiesAvailable;
+      this.#rentedCopies = 0;
     }
-
-    get author() {
-        return this.#author;
+  
+    getAuthor() {
+      return this.#author;
     }
-
-    set author(value) {
-        this.#author = value;
+  
+    getPrice() {
+      return this.#price;
     }
-
-    get price() {
-        return this.#price;
+  
+    getRentalPrice() {
+      return this.#rentalPrice;
     }
-
-    set price(value) {
-        this.#price = value;
+  
+    getCopiesAvailable() {
+      return this.#copiesAvailable;
     }
-
-    get rentalPrice() {
-        return this.#rentalPrice;
+  
+    getRentedCopies() {
+      return this.#rentedCopies;
     }
-
-    set rentalPrice(value) {
-        this.#rentalPrice = value;
+  
+    setAuthor(author) {
+      this.#author = author;
     }
-
-    get copiesAvailable() {
-        return this.#copiesAvailable;
+  
+    setPrice(price) {
+      this.#price = price;
     }
-
-    set copiesAvailable(value) {
-        this.#copiesAvailable = value;
+  
+    setRentalPrice(rentalPrice) {
+      this.#rentalPrice = rentalPrice;
     }
-    buyBook() {
-        if (this.#copiesAvailable > 0) {
-            this.#copiesAvailable--;
-            console.log(`Book purchased. Remaining copies: ${this.#copiesAvailable}`);
-        } else {
-            console.log("Sorry, the book is out of stock.");
-        }
+  
+    setCopiesAvailable(copiesAvailable) {
+      this.#copiesAvailable = copiesAvailable;
     }
-    rentBook() {
-        if (this.#copiesAvailable > 0) {
-            this.#copiesAvailable--;
-            console.log(`Book rented. Remaining copies: ${this.#copiesAvailable}`);
-        } else {
-            console.log("Sorry, the book is out of stock.");
-        }
+  
+    setRentedCopies(rentedCopies) {
+      this.#rentedCopies = rentedCopies;
     }
-    returnBook() {
-        this.#copiesAvailable++;
-        console.log(`Book returned. Available copies: ${this.#copiesAvailable}`);
+  
+    buyBook(book) {
+      if (this.#copiesAvailable >= book) {
+        this.#copiesAvailable -= book;
+        return `You have bought ${book} copies. Remaining copies: ${this.#copiesAvailable}`;
+      } else {
+        return "Sorry, you don't have enough copies.";
+      }
     }
-
+  
+    rentBook(book) {
+      if (this.#copiesAvailable >= book) {
+        this.#copiesAvailable -= book;
+        this.#rentedCopies += book;
+        return `You have rented ${book} copies. Remaining copies: ${this.#copiesAvailable}`;
+      } else {
+        return "Sorry, you don't have enough copies.";
+      }
+    }
+  
+    returnBook(book) {
+      if (this.#rentedCopies >= book) {
+        this.#rentedCopies -= book;
+        this.#copiesAvailable += book;
+        return `You have returned ${book} rented copies. Available copies: ${this.#copiesAvailable}`;
+      } else {
+        return "Sorry, you are trying to return more copies than rented.";
+      }
+    }
+  
     checkAvailability() {
-        console.log(`Copies available: ${this.#copiesAvailable}`);
+      return this.#copiesAvailable;
     }
-}
-
-const book1 = new Book("JavaScript", "bill gates", 30, 5, 10);
-
-book1.checkAvailability();
-book1.buyBook();
-book1.rentBook();
-book1.returnBook();
-book1.checkAvailability();
+  
+    displayBookInfo() {
+      return `Title: ${this.title}, Author: ${this.#author}, Price: $${this.#price}, Rental Price: $${this.#rentalPrice}, Copies Available: ${this.#copiesAvailable}, Rented Copies: ${this.#rentedCopies}`;
+    }
+  }
+  
+  let book1 = new Book("The Great Himalayas", "Ramesh thakkar", 500, 100, 19);
+  
+  console.log(book1.buyBook(10));
+  console.log(book1.rentBook(5));
+  console.log(book1.returnBook(5));
+  console.log(book1.checkAvailability());
+  console.log(book1.displayBookInfo());
+  
+  book1.setAuthor("abc");
+  book1.setPrice(400);
+  book1.setRentalPrice(150);
+  book1.setCopiesAvailable(20);
+  book1.setRentedCopies(3);
+  
+  console.log(book1.displayBookInfo());
+  
