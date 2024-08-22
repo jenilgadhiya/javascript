@@ -13,11 +13,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url(./img/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .post-container {
     width: 400px;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -63,7 +69,8 @@ body {
 }
 
 .post-icons {
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     padding: 10px 15px;
@@ -86,4 +93,12 @@ body {
 .icon-group {
     display: flex;
     align-items: center;
+}
+
+.fa-heart:hover{
+    color: red;
+}
+
+.fa-comment:hover{
+    color: #42b8fd;
 }
