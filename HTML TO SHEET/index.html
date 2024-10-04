@@ -97,25 +97,25 @@ input{
         <div class="container">
             <div class="registration-form">
                 <h2>HTML TO SHEET CONVERTER</h2>
-                <form id="form">
-                    <div>
-                        <input type="text" class="w-100" placeholder="Name"
+                <form id="form" method="post">
+                    <div class="formOuter">
+                        <input type="text" name="name" class="w-100" placeholder="Name"
                             required>
                     </div>
-                    <div>
-                        <input type="email" class="w-100"
+                    <div class="formOuter">
+                        <input type="email" name="email" class="w-100"
                             placeholder="Email address"
                             required>
                     </div>
-                    <div>
-                        <input type="text" class="w-100" placeholder="Country"
+                    <div class="formOuter">
+                        <input type="text" name="country" class="w-100" placeholder="Country"
                             required>
                     </div>
-                    <div>
-                        <input type="tel" class="w-100" placeholder="Phone"
+                    <div class="formOuter">
+                        <input type="tel" name="phone" class="w-100" placeholder="Phone"
                             required>
                     </div>
-                    <div>
+                    <div class="formOuter">
                         <button type="submit" class="btn bg-black text-white w-100" id="btn"
                             class="w-100" name="btn">SUBMIT</button>
                     </div>
@@ -124,7 +124,7 @@ input{
         </div>
     </body>
     <script>
-            let url='https://script.google.com/macros/s/AKfycbzVCGr77yJp1mfvjsLBW2PjfQM_LVHjvGei3FnCnQHCK8XA1SCuQ8kBtFPFQjTRbFs/exec';
+            let url='https://script.google.com/macros/s/AKfycbzVCGr77yJp1mfvjsLBW2PjfQM_LVHjvGei3FnCnQHCK8XA1SCuQ8kBtFPFQjTRbFs/execl';
             let form = document.querySelector('#form');
             form.addEventListener("submit", (e)=>{
                 e.target.btn.innerHTML = "Submitting";
