@@ -1,21 +1,16 @@
-const getVal = (className) => 
-    {
+const getValue = (className) => {
   return document.querySelector(className).value;
-    };
-    
-    export default getval;
-    export const createTag = (tag, value) => {
-  
-    let tagName = document.createElement(tag);
-  
-    if (tag == "img") 
-    {
+};
+
+export default getValue;
+
+export const createTag = (tag, value) => {
+  let tagName = document.createElement(tag);
+  if (tag == "img") {
     tagName.src = value;
-    } 
-    else 
-    {
+  } else {
     tagName.innerHTML = value;
-    }
-  
-    return tagName;
+  }
+
+  return tagName;
 };

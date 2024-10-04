@@ -1,0 +1,48 @@
+{
+  "quizData": [
+    {
+      "id": "1",
+      "question": "What is the capital of France?",
+      "choices": [
+        "Berlin",
+        "Madrid",
+        "Paris",
+        "Rome"
+      ],
+      "correct": "Paris"
+    },
+    {
+      "id": "2",
+      "question": "Which language is used for web development?",
+      "choices": [
+        "Python",
+        "JavaScript",
+        "C++",
+        "Java"
+      ],
+      "correct": "JavaScript"
+    },
+    {
+      "id": "3",
+      "question": "Who is the founder of Microsoft?",
+      "choices": [
+        "Steve Jobs",
+        "Bill Gates",
+        "Mark Zuckerberg",
+        "Elon Musk"
+      ],
+      "correct": "Bill Gates"
+    },
+    {
+      "id": "c14a",
+      "question": "what is your name?",
+      "choices": [
+        "jenil",
+        "ram",
+        "Ahmedabad ",
+        "bhavnagar"
+      ],
+      "correct": "jenil"
+    }
+  ]
+}

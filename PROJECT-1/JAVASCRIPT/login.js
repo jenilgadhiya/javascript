@@ -1,29 +1,32 @@
-import getVal from "../components/Helper.js";
+import getValue from "../COMPONENTS/help.js";
+import Navbar from "../COMPONENTS/nav.js";
 
-let user = JSON.parse(localStorage.getItem("user")) || [];
+document.getElementById("navbar").innerHTML = Navbar();
 
+let users = JSON.parse(localStorage.getItem("users")) || [];
 const handleData = (e) => {
   e.preventDefault();
-  
-  let user = {
-    email: getVal(".email"),
-    password: getVal(".password"),
-  };
-  let isMatched = user.filter(
-    (ele) => ele.email == user.email && ele.password 
-    == user.password
-  );
-  if (isMatched.length > 0) {
-    localStorage.setItem("username", isMatched[0].username);
-    
-    localStorage.setItem("isLogin", true);
-   
-    window.location.href = "./index.html";
-  
-    } else 
-    {
-    alert("Login Failed,Please try again");
-    }
 
-    };
-    document.querySelector("#UserData").addEventListener("submit", handleData);
+  let user = {
+    email: getValue(".email"),
+    password: getValue(".password"),
+  };
+
+  let isMatched = users.filter(
+    (ele) => ele.email == user.email && ele.password == user.password
+  );
+
+  if (isMatched.length > 0) {
+    alert("login success");
+
+    localStorage.setItem("username", isMatched[0].username);
+
+    localStorage.setItem("isLogin", true);
+
+    window.location.href = "/index.html";
+  } else {
+    alert("login failure");
+  }
+};
+
+document.querySelector("#userData").addEventListener("submit", handleData);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ Quiz</title>
+  <link rel="stylesheet" href="add.css">
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h2 id="question"></h2>
+    <ul id="choices" class="choices-list"></ul>
+    <button id="submit" onclick="submitAnswer()">Submit</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <div class="add-question-container">
+    <h2>Add New Question</h2>
+    <form id="addQuestionForm">
+      <label for="newQuestion">Question:</label>
+      <input type="text" id="newQuestion" required>
+
+      <label for="newChoice1">Choice 1:</label>
+      <input type="text" id="newChoice1" required>
+
+      <label for="newChoice2">Choice 2:</label>
+      <input type="text" id="newChoice2" required>
+
+      <label for="newChoice3">Choice 3:</label>
+      <input type="text" id="newChoice3" required>
+
+      <label for="newChoice4">Choice 4:</label>
+      <input type="text" id="newChoice4" required>
+
+      <label for="correctAnswer">Correct Answer:</label>
+      <input type="text" id="correctAnswer" required>
+
+      <button type="submit">Add Question</button>
+    </form>
+  </div>
+
+  <script src="add.js"></script>
+</body>
+</html>

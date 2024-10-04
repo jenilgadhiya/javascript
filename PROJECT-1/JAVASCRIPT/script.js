@@ -1,3 +1,2 @@
-import navbar from "../components/Navbar.js";
-
-document.getElementById("navbar").innerHTML = navbar();
+import Navbar from "../COMPONENTS/nav.js";
+document.getElementById("navbar").innerHTML = Navbar();
